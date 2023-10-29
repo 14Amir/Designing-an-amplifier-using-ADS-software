@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      Amir
+HostName                       DESKTOP-P2I5RB6
+ProcessIdentifier              13268
+ProcessCreationTime_UTC        1625925934
+ProcessCreationTime_Readable   Sat Jul 10 18:35:34 2021 Iran Daylight Time
+AppIdentifier                  OA File System Design Manager
+OSType                         win32
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         C:\Users\Amir\Desktop\term4\elec2\project\project_elec2_wrk\project_elec2_lib\tech.db.cdslck
+TimeEditLocked                 Sat Jul 10 18:36:08 2021 Iran Daylight Time

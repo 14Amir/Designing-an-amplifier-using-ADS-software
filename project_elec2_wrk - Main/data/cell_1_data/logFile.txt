@@ -1,0 +1,11 @@
+
+hpeesofsim (*) 530.shp Aug 11 2020, MINT version 5
+    (64-bit windows built: Wed Aug 12, 2020 02:42:05 +0000)
+
+
+AC AC1[1] <project_elec2_lib:cell_1:schematic>   freq=(1 kHz->10 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     0.55 seconds.
+

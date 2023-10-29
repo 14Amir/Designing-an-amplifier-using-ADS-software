@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dc_annotation_options>
+ <options ToggleCurrent="true" ToggleVoltage="true" library="project_elec2_lib" view="schematic" cell="cell_1"/>
+</dc_annotation_options>

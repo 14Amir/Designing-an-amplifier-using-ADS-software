@@ -1,0 +1,68 @@
+; Top Design: "project_elec2_lib:cell_1:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="project_elec2_lib:cell_1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+V_Source:SRC1  Vin 0 Type="V_AC" Vdc=0.0 V Vac=polar(1,0) V Freq=freq V_Noise=0 uV SaveCurrent=1 
+R:R1  Vin Vr R=100 kOhm Noise=yes 
+R:R2  N__5 N__19 R=100 kOhm Noise=yes 
+model PNP1 BJT NPN=0 PNP=1 Is=(8*(10^(-14))) A Bf=100 Vaf=40 V Lateral=0 RbModel=0 Approxqb=1 
+model PNP2 BJT NPN=0 PNP=1 Is=(10^(-13)) A Bf=20 Vaf=10 Lateral=0 RbModel=0 Approxqb=1 
+model NPN1 BJT NPN=1 PNP=0 Is=(5*(10^(-15))) A Bf=200 Vaf=100 V Lateral=0 RbModel=0 Approxqb=1 
+model NPN2 BJT NPN=1 PNP=0 Is=(10^(-13)) A Bf=40 Vaf=10 V Lateral=0 RbModel=0 Approxqb=1 
+"NPN1":BJT1  N__9 Vr N__13 Mode=1 Noise=yes 
+"NPN1":BJT2  N__12 N__5 N__13 Mode=1 Noise=yes 
+"NPN1":BJT3  N__16 N__7 N__9 Mode=1 Noise=yes 
+"NPN1":BJT4  Vo1 N__7 N__12 Mode=1 Noise=yes 
+"NPN1":BJT15  N__13 N__8 N__3 Mode=1 Noise=yes 
+"PNP1":BJT13  Vo1 N__16 N__10 Mode=1 Noise=yes 
+"PNP1":BJT14  N__16 N__16 N__10 Mode=1 Noise=yes 
+V_Source:SRC5  0 N__22 Type="V_DC" Vdc=10 V SaveCurrent=1 
+V_Source:SRC6  N__10 0 Type="V_DC" Vdc=10 V SaveCurrent=1 
+R:R8  N__10 N__7 R=10 kOhm Noise=yes 
+R:R4  N__7 0 R=90 kOhm Noise=yes 
+AC:AC1 CalcNoise=no SortNoise=0 IncludePortNoise=yes BandwidthForNoise=1 Hz FreqConversion=no UseFiniteDiff=no StatusLevel=2 OutputBudgetIV=no DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="AC1_stim" OutputPlan="AC1_Output" 
+
+SweepPlan: AC1_stim Start=1.0 kHz Stop=10.0 GHz Step=1.0 GHz 
+
+OutputPlan:AC1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+
+"PNP1":BJT5  0 Vo1 Vo2 Mode=1 Noise=yes 
+"PNP1":BJT6  Vo3 Vo2 N__10 Mode=1 Noise=yes 
+"NPN1":BJT7  N__23 Vo3 N__22 Mode=1 Noise=yes 
+"NPN2":BJT8  N__10 N__21 Vo4 Mode=1 Noise=yes 
+"PNP2":BJT9  N__22 N__23 Vo4 Mode=1 Noise=yes 
+R:R17  N__10 N__2 R=90 Ohm Noise=yes 
+"PNP1":BJT17  N__23 N__23 N__30 Mode=1 Noise=yes 
+"PNP1":BJT16  N__30 N__30 N__21 Mode=1 Noise=yes 
+R:R11  N__10 N__4 R=18 kOhm Noise=yes 
+R:R5  N__3 N__22 R=7 kOhm Noise=yes 
+R:R6  N__8 N__22 R=0.5525 kOhm Noise=yes 
+R:R7  N__10 N__8 R=19.4475 kOhm Noise=yes 
+"NPN1":BJT18  Vo3 N__8 N__24 Mode=1 Noise=yes 
+R:R9  Vo4 0 R=100 Ohm Noise=yes 
+Short:DC_Block1  0 N__19 Mode=1 
+R:R10  N__24 N__22 R=6.2 kOhm Noise=yes 
+"PNP1":BJT19  Vo2 N__28 N__4 Mode=1 Noise=yes 
+R:R12  N__10 N__28 R=507 kOhm Noise=yes 
+R:R13  N__28 N__22 R=24.493 MOhm Noise=yes 
+"PNP1":BJT20  N__21 N__18 N__2 Mode=1 Noise=yes 
+R:R15  N__10 N__18 R=1 kOhm Noise=yes 
+R:R16  N__18 0 R=11 kOhm Noise=yes 
+Short:DC_Feed1  Vo4 N__19 Mode=-1 
